@@ -29,13 +29,13 @@ def contact(request):
         contact.save()
 
         # send email
-        send_mail(
-                'Property Listing Enquiry',
-                'There has been an enquiry for ' + listing + '. Sign into the admin panel for more info',
-                'necrotica669@gmail.com',
-                [realtor_email, 'degdacruz@yahoo.com'],
-                fail_silently=False
-        )
+        # send_mail(
+        #         'Property Listing Enquiry',
+        #         'There has been an enquiry for ' + listing + '. Sign into the admin panel for more info',
+        #         'necrotica669@gmail.com',
+        #         [realtor_email, 'degdacruz@yahoo.com'],
+        #         fail_silently=False
+        # )
 
         messages.success(request, 'Your request has been submitted. A realtor will get back to you soon')
         return redirect('/listings/'+listing_id)
